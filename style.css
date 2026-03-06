@@ -149,3 +149,52 @@ cursor:pointer;
 .filter-buttons button:hover{
 background:#1a5bbf;
 }
+.viewer-container{
+
+width:90%;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+}
+
+.upload-section{
+
+width:60%;
+margin:50px auto;
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+
+}
+
+.upload-section input,
+.upload-section select{
+
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+
+}
+
+.upload-section button{
+
+padding:12px;
+background:#2c7be5;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+
+}
+
+.upload-section button:hover{
+
+background:#1a5bbf;
+
+}
