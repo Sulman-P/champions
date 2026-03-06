@@ -2,91 +2,124 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VisionPoint Learning Portal</title>
-
+<title>VisionPoint Admin Dashboard</title>
 <link rel="stylesheet" href="style.css">
-
 </head>
 
-<body>
+<body class="admin-body">
 
-<header>
-<div class="logo">VisionPoint</div>
+<div class="admin-container">
 
-<nav>
-<a href="#">Home</a>
-<a href="#">Learning Areas</a>
-<a href="#">Resources</a>
-<a href="#">About</a>
-</nav>
+<!-- Sidebar -->
+<aside class="sidebar">
+
+<h2>VisionPoint</h2>
+
+<ul>
+<li><a href="#">Dashboard</a></li>
+<li><a href="#">Resources</a></li>
+<li><a href="#">Uploads</a></li>
+<li><a href="#">Users</a></li>
+<li><a href="#">Settings</a></li>
+<li><a href="index.html">Exit Portal</a></li>
+</ul>
+
+</aside>
+
+
+<!-- Main Content -->
+<main class="admin-main">
+
+<header class="admin-header">
+<h1>Admin Dashboard</h1>
+<p>Manage VisionPoint Exam Resources</p>
 </header>
 
 
-<section class="hero">
+<!-- Stats -->
+<div class="dashboard-cards">
 
-<div class="hero-content">
+<div class="card">
+<h3>Total Exams</h3>
+<p>24</p>
+</div>
 
-<h1>VisionPoint Academic Portal</h1>
+<div class="card">
+<h3>Teachers</h3>
+<p>8</p>
+</div>
 
-<p>
-Access quality learning resources for Junior School learners in Kenya.
-Educational materials are organized by learning areas for easy study.
-</p>
+<div class="card">
+<h3>Students</h3>
+<p>112</p>
+</div>
 
-<a class="btn" href="#">Browse Learning Areas</a>
+<div class="card">
+<h3>Downloads</h3>
+<p>530</p>
+</div>
 
 </div>
+
+
+<!-- Upload Management -->
+<section class="admin-section">
+
+<h2>Upload New Exam</h2>
+
+<form>
+
+<input type="text" placeholder="Exam Title">
+
+<select>
+<option>Select Subject</option>
+<option>Mathematics</option>
+<option>Integrated Science</option>
+<option>English</option>
+<option>Social Studies</option>
+</select>
+
+<input type="file" accept=".pdf,.doc,.docx">
+
+<button type="submit">Upload Exam</button>
+
+</form>
 
 </section>
 
 
-<section class="categories">
+<!-- Resource Table -->
+<section class="admin-section">
 
-<h2>Junior School Learning Areas</h2>
+<h2>Uploaded Resources</h2>
 
-<div class="grid">
+<table>
 
-<div class="card">
-<h3>Mathematics</h3>
-<p>Practice exams, revision papers and study materials.</p>
-</div>
+<tr>
+<th>Title</th>
+<th>Subject</th>
+<th>Action</th>
+</tr>
 
-<div class="card">
-<h3>Integrated Science</h3>
-<p>Notes, exam papers and interactive learning resources.</p>
-</div>
+<tr>
+<td>Grade 7 Math Exam</td>
+<td>Mathematics</td>
+<td><button class="delete">Delete</button></td>
+</tr>
 
-<div class="card">
-<h3>English</h3>
-<p>Comprehension papers, grammar exercises and exams.</p>
-</div>
+<tr>
+<td>Science Paper</td>
+<td>Integrated Science</td>
+<td><button class="delete">Delete</button></td>
+</tr>
 
-<div class="card">
-<h3>Kiswahili</h3>
-<p>Practice exams and revision materials for learners.</p>
-</div>
-
-<div class="card">
-<h3>Social Studies</h3>
-<p>Notes, revision papers and academic resources.</p>
-</div>
-
-<div class="card">
-<h3>Creative Arts</h3>
-<p>Learning materials and practical resources.</p>
-</div>
-
-</div>
+</table>
 
 </section>
 
+</main>
 
-<footer>
-
-<p>© 2026 VisionPoint Learning Portal</p>
-
-</footer>
+</div>
 
 </body>
 </html>
