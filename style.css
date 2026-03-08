@@ -332,7 +332,17 @@ color:white;
 text-decoration:none;
 border-radius:5px;
 }
+.dark{
+background:#121212;
+color:white;
+}
+
+.dark .resource-card{
+background:#1e1e1e;
+color:white;
+}
 
 .view-btn:hover{
 background:#1a5bbf;
 }
+
