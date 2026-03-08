@@ -1,94 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VisionPoint Learning Portal</title>
 
-<link rel="stylesheet" href="style.css">
+<title>VisionPoint Learning Platform</title>
 
+<style>
+
+/* GLOBAL */
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f4f6fb;
+color:#333;
+}
+
+/* MODERN NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:#0d47a1;
+color:white;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+.nav-links a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-size:15px;
+}
+
+.nav-links a:hover{
+color:#ffd700;
+}
+
+/* HERO SECTION */
+
+.hero{
+height:70vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("students.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+/* SEARCH BAR */
+
+.search-container{
+margin-top:20px;
+}
+
+.search-container input{
+padding:12px;
+width:300px;
+border:none;
+border-radius:5px;
+}
+
+.search-container button{
+padding:12px 20px;
+border:none;
+background:#ffd700;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* FEATURES */
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:60px 10%;
+background:white;
+}
+
+.feature-card{
+background:#f9fbff;
+padding:30px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.feature-card:hover{
+transform:translateY(-10px);
+}
+
+/* RESOURCE SECTION */
+
+.resources{
+padding:60px 10%;
+}
+
+.resources h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+.resource-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.resource-card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.resource-card:hover{
+transform:translateY(-8px);
+}
+
+.resource-card button{
+background:#0d47a1;
+color:white;
+border:none;
+padding:10px 15px;
+margin-top:10px;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+background:#0d47a1;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-<div class="logo">VisionPoint</div> 
-<nav class="navbar">
-    <a href="admin.html">Admin</a>
-    <a href="index.html">Home</a>
-    <a href="resources.html">Resources</a>
-    <a href="#categories">Categories</a>
-    <a href="#register">Register</a>
-    <a href="#login">Login</a>
-    <a href="upload.html">Teacher Upload</a>
-</nav>
-</header>
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="logo">VisionPoint</div>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="resources.html">Resources</a>
+<a href="upload.html">Upload</a>
+<a href="about.html">About</a>
+<a href="privacy.html">Privacy</a>
+
+</div>
+
+</div>
+
+
+<!-- HERO SECTION -->
 
 <section class="hero">
 
-<div class="hero-content">
+<div>
 
-<h1>VisionPoint Academic Portal</h1>
+<h1>Quality Learning Resources</h1>
 
-<p>
-Access quality learning resources for Junior School learners in Kenya.
-Educational materials are organized by learning areas for easy study.
-</p>
+<p>Access Exams, Revision Papers and Study Materials</p>
 
-<a class="btn" href="#">Browse Learning Areas</a>
+<div class="search-container">
+
+<input type="text" id="searchInput" placeholder="Search exams...">
+
+<button onclick="searchExam()">Search</button>
+
+</div>
 
 </div>
 
 </section>
 
 
-<section class="categories">
+<!-- FEATURES -->
 
-<h2>Junior School Learning Areas</h2>
+<section class="features">
 
-<div class="grid">
+<div class="feature-card">
 
-<div class="card">
-<h3>Mathematics</h3>
-<p>Practice exams, revision papers and study materials.</p>
+<h3>Exam Papers</h3>
+
+<p>Access past papers and exam revision resources.</p>
+
 </div>
 
-<div class="card">
+<div class="feature-card">
+
+<h3>Teacher Uploads</h3>
+
+<p>Teachers share learning materials for students.</p>
+
+</div>
+
+<div class="feature-card">
+
+<h3>Online Resources</h3>
+
+<p>Study anywhere using our digital exam platform.</p>
+
+</div>
+
+</section>
+
+
+<!-- RESOURCE PREVIEW -->
+
+<section class="resources">
+
+<h2>Popular Exam Resources</h2>
+
+<div class="resource-grid">
+
+<div class="resource-card" data-title="mathematics exam">
+
+<h3>Mathematics Exam</h3>
+
+<p>Grade 7 End Term Paper</p>
+
+<button onclick="openExam('math_exam.pdf')">View Exam</button>
+
+</div>
+
+<div class="resource-card" data-title="science exam">
+
 <h3>Integrated Science</h3>
-<p>Notes, exam papers and interactive learning resources.</p>
+
+<p>Revision Paper</p>
+
+<button onclick="openExam('science_exam.pdf')">View Exam</button>
+
 </div>
 
-<div class="card">
-<h3>English</h3>
-<p>Comprehension papers, grammar exercises and exams.</p>
+<div class="resource-card" data-title="english exam">
+
+<h3>English Paper</h3>
+
+<p>Grammar and Comprehension</p>
+
+<button onclick="openExam('english_exam.pdf')">View Exam</button>
+
 </div>
 
-<div class="card">
-<h3>Kiswahili</h3>
-<p>Practice exams and revision materials for learners.</p>
-</div>
+<div class="resource-card" data-title="social studies">
 
-<div class="card">
 <h3>Social Studies</h3>
-<p>Notes, revision papers and academic resources.</p>
+
+<p>History and Geography</p>
+
+<button onclick="openExam('social_exam.pdf')">View Exam</button>
+
 </div>
 
-<div class="card">
-<h3>Creative Arts</h3>
-<p>Learning materials and practical resources.</p>
-</div>
-<div class="card">
-<h3>Pre Technical Studies</h3>
-<p>Learning materials and practical resources.</p>
-</div>
-  <div class="card">
-<h3>Religious Education</h3>
-<p>Learning materials and practical resources.</p>
-</div>
-  <div class="card">
-<h3>Kenya Sign Language(KSL)</h3>
-<p>Learning materials and practical resources.</p>
-</div>
 </div>
 
 </section>
@@ -96,13 +298,44 @@ Educational materials are organized by learning areas for easy study.
 
 <footer>
 
-<p>© 2026 VisionPoint Learning Portal</p>
+<p>© 2026 VisionPoint Learning Platform</p>
 
 </footer>
 
+
+<script>
+
+/* SEARCH SYSTEM */
+
+function searchExam(){
+
+let input=document.getElementById("searchInput").value.toLowerCase()
+
+let cards=document.querySelectorAll(".resource-card")
+
+cards.forEach(card=>{
+
+let title=card.dataset.title
+
+if(title.includes(input)){
+card.style.display="block"
+}else{
+card.style.display="none"
+}
+
+})
+
+}
+
+/* OPEN EXAM */
+
+function openExam(file){
+
+window.location.href="viewer.html?file="+file
+
+}
+
+</script>
+
 </body>
 </html>
-
-
-
-
