@@ -416,5 +416,30 @@ color:#555;
   right: 15%;
   animation: float 4.5s ease-in-out infinite;
 }
+.exam-section{
+text-align:center;
+padding:80px 20px;
+background:#f5f7fb;
+}
+
+.exam-section h2{
+font-size:32px;
+margin-bottom:20px;
+}
+
+.exam-section p{
+max-width:600px;
+margin:auto;
+margin-bottom:30px;
+}
+
+.btn{
+background:#4f46e5;
+color:white;
+padding:12px 25px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+}
 
 
