@@ -441,5 +441,52 @@ border-radius:8px;
 text-decoration:none;
 font-weight:600;
 }
+.admin-container{
+
+max-width:900px;
+margin:auto;
+padding:40px;
+
+}
+
+.admin-container input,
+.admin-container textarea{
+
+width:100%;
+padding:10px;
+margin:10px 0;
+
+border:1px solid #ccc;
+border-radius:6px;
+
+}
+
+.admin-container button{
+
+background:#4f46e5;
+color:white;
+
+padding:10px 20px;
+
+border:none;
+border-radius:6px;
+
+cursor:pointer;
+
+}
+
+.exam-card{
+
+background:white;
+
+padding:20px;
+
+margin-top:15px;
+
+border-radius:8px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+}
 
 
