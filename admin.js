@@ -1,39 +1,39 @@
-const supabase = window.supabase.createClient("YOUR_URL","YOUR_KEY");
+const supabaseUrl = "https://ywywxtzkoevrlekzksjb.supabase.co"
+const supabaseKey = "sb_publishable_rOO6y17Kc48f-wb6vcF26Q_xtbT3oCL"
 
-async function loadStats(){
-  const { data: users } = await supabase.from("profiles").select("*");
-  const { data: docs } = await supabase.from("documents").select("*");
-  const { data: purchases } = await supabase
-      .from("purchases")
-      .select("*")
-      .eq("paid", true);
+const supabaseClient = supabase.createClient(
+supabaseUrl,
+supabaseKey
+)
+async function createExam(){
 
-  document.getElementById("stats").innerHTML = `
-    <p>Total Users: ${users.length}</p>
-    <p>Total Documents: ${docs.length}</p>
-    <p>Total Paid Purchases: ${purchases.length}</p>
-  `;
+const title = document.getElementById("examTitle").value
+const subject = document.getElementById("examSubject").value
+const time = document.getElementById("examTime").value
+const description = document.getElementById("examDescription").value
+
+const { data, error } = await supabaseClient
+.from("exams")
+.insert([
+{
+title: title,
+subject: subject,
+time_limit: time,
+description: description,
+exam_type: "online"
+}
+])
+
+if(error){
+
+alert(error.message)
+
+}else{
+
+alert("Exam Created")
+
+loadExams()
+
 }
 
-async function loadUsers(){
-  const { data } = await supabase.from("profiles").select("*");
-  document.getElementById("output").innerHTML =
-    data.map(u => `<p>${u.full_name} - ${u.role}</p>`).join("");
-}
-
-async function loadDocs(){
-  const { data } = await supabase.from("documents").select("*");
-  document.getElementById("output").innerHTML =
-    data.map(d => `<p>${d.title}</p>`).join("");
-}
-
-async function loadRevenue(){
-  const { data } = await supabase
-      .from("purchases")
-      .select("amount")
-      .eq("paid", true);
-
-  const total = data.reduce((sum, i)=> sum + i.amount, 0);
-  document.getElementById("output").innerHTML =
-    `<h3>Total Revenue: KES ${total}</h3>`;
 }
