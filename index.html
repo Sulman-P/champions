@@ -54,11 +54,13 @@
         <a href="resources/arts.html" class="btn">Creative Arts</a>
       </div>
       <!-- Upload Resources Button -->
-      <label class="btn upload-btn">
+      <form action="http://localhost:5000/upload" method="POST" enctype="multipart/form-data">
+         <label class="btn upload-btn">
          Upload Resources
-        <input type="file" hidden>
-       </label>
-      <span class="class-name"></span>
+         <input type="file" name="resource" class="file-input" onchange="this.form.submit()">
+        </label>
+      </form>
+      <span class="file-name"></span>
        <a href="#" class="btn">Explore Resources</a>
      </section>
 
@@ -79,10 +81,12 @@
         <a href="resources/signlanguage.html" class="btn">Kenya Sign Language</a>
       </div>
       <!-- Upload Resources Button -->
-      <label class="btn upload-btn">
-         Upload Resources
-       <input type="file" hidden>
+      <form action="http://localhost:5000/upload" method="POST" enctype="multipart/form-data">
+       <label class="btn upload-btn">
+       Upload Resources
+       <input type="file" name="resource" class="file-input" onchange="this.form.submit()">
        </label>
+     </form>
         <span class="file-name"></span>
         <a href="#" class="btn">Explore Resources</a>
      </section>
@@ -106,11 +110,13 @@
         <a href="resources/computer.html" class="btn">Computer Studies</a>
       </div>
      <!-- Upload Resources Button -->
-  <label class="btn upload-btn">
-     Upload Resources
-     <input type="file" hidden>
-     </label>
-     <span class="file-name"></span>
+     <form action="http://localhost:5000/upload" method="POST" enctype="multipart/form-data">
+     <label class="btn upload-btn">
+      Upload Resources
+     <input type="file" name="resource" class="file-input" onchange="this.form.submit()">
+      </label>
+    </form>
+    <span class="file-name"></span>
      <a href="#" class="btn">Explore Resources</a>
    </section>
 
@@ -128,10 +134,12 @@
         <a href="resources/intlrelations.html" class="btn">International Relations</a>
       </div>
       <!-- Upload Resources Button -->
-     <label class="btn upload-btn">
-       Upload Resources
-      <input type="file" hidden>
+     <form action="http://localhost:5000/upload" method="POST" enctype="multipart/form-data">
+       <label class="btn upload-btn">
+      Upload Resources
+       <input type="file" name="resource" class="file-input" onchange="this.form.submit()">
       </label>
+   </form>
        <span class="file-name"></span>
        <a href="#" class="btn">Explore Resources</a>
      </section>
@@ -147,10 +155,12 @@
         <a href="resources/digital.html" class="btn">Digital Skills</a>
       </div>
       <!-- Upload Resources Button -->
+     <form action="http://localhost:5000/upload" method="POST" enctype="multipart/form-data">
      <label class="btn upload-btn">
-       Upload Resources
-      <input type="file" hidden>
-      </label>
+      Upload Resources
+      <input type="file" name="resource" class="file-input" onchange="this.form.submit()">
+     </label>
+    </form>
       <span class="file-name"></span>
       <a href="#" class="btn">Explore Resources</a>
    </section>
