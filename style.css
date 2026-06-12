@@ -47,6 +47,21 @@ nav a:hover {
   color: #ffdd00;
 }
 
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  background: #0055aa;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.menu-toggle:focus {
+  outline: none;
+}
+
 /* Main Content */
 main {
   padding: 2rem;
@@ -90,4 +105,27 @@ footer {
 footer p {
   margin: 0;
   font-size: 0.9rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+  }
 }
