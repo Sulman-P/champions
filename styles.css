@@ -263,4 +263,19 @@ footer p {
   flex: 1 1 150px;
   text-align: center;
 }
+/* Upload Button Styling */
+.upload-btn {
+  cursor: pointer;
+  position: relative;
+}
+
+.upload-btn input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
 
