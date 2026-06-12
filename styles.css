@@ -278,4 +278,28 @@ footer p {
   width: 100%;
   height: 100%;
 }
+/* Upload Button Styling */
+.upload-btn {
+  cursor: pointer;
+  position: relative;
+}
+
+.upload-btn input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+/* File name display */
+.file-name {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+  font-style: italic;
+}
 
