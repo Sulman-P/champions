@@ -170,4 +170,13 @@
     });
   </script>
 </body>
+  <script>
+  // Handle file picker feedback
+  document.querySelectorAll('.file-input').forEach(input => {
+    input.addEventListener('change', function() {
+      const fileName = this.files.length > 0 ? this.files[0].name : "No file selected";
+      this.closest('section').querySelector('.file-name').textContent = "Selected: " + fileName;
+    });
+  });
+</script>
 </html>
