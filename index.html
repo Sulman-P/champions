@@ -5,67 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nexalearn International</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f6f9;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #003366;
-      color: #fff;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    nav {
-      background: #0055aa;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 0.75rem;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      padding: 2rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-    section {
-      margin-bottom: 2.5rem;
-    }
-    section h2 {
-      color: #003366;
-    }
-    footer {
-      background: #003366;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-    .btn {
-      display: inline-block;
-      background: #0055aa;
-      color: #fff;
-      padding: 0.7rem 1.2rem;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-    .btn:hover {
-      background: #003366;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -73,6 +12,10 @@
     <p>Empowering education, collaboration, and innovation worldwide</p>
   </header>
 
+  <!-- Hamburger Menu Button -->
+  <button class="menu-toggle">☰ Menu</button>
+
+  <!-- Navigation -->
   <nav>
     <a href="#courses">Courses</a>
     <a href="#resources">Resources</a>
@@ -116,5 +59,15 @@
   <footer>
     <p>&copy; 2026 Nexalearn International. All rights reserved.</p>
   </footer>
+
+  <!-- JavaScript for Hamburger Menu -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
